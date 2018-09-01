@@ -31,7 +31,7 @@
       <div class="shelterWrap">
         <p class="info">보호소 리스트</p>
         <div class="searchWrap">
-          <input type="text" name="searchKeyword" value="">
+          <input type="text" v-model="search" name="searchKeyword" value="">
           <a class="search"><img src="../../assets/img/search.png"></a>
         </div>
         <div class="listWrap">
@@ -40,7 +40,7 @@
               <li v-for="(item, index) in this.$store.getters.getCenters" :key="index">
                 <a @click="viewDetail(index)">
                   <div class="shelterName active">{{ item.name }}</div>
-                  <div class="shelterState">{{ item.address }}</div>
+                  <div class="shelterState">{{ splitSigungu(item.address) }} | 고양이 {{ item.num_cats }}마리가 기다립니다.</div>
                 </a>
               </li>
             </ul>
@@ -129,9 +129,14 @@ export default {
     },
     prevStep () {
       this.$store.commit(DONATE_PREV_STEP)
+    },
+    splitSigungu (address) {
+      const ary = address.split(' ')
+      return ary[0] + ' ' + ary[1]
     }
   }
 }
+
 </script>
 
 <style>

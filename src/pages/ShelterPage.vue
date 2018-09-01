@@ -13,7 +13,6 @@ export default {
   }
 }
 </script>
-</script>
 
 <style>
 
