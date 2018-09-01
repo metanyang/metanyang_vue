@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "countup.js": "^1.9.3",
     "vue": "^2.5.2",
     "vue-carousel": "^0.11.0",
     "vue-router": "^3.0.1"

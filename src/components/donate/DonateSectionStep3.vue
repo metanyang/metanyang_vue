@@ -23,12 +23,12 @@
           </div>
           <div class="detail">
             <p class="subject">보내시는 물품</p>
-            <p class="info"> {{ this.$store.getters.getGoods[this.$store.getters.getParams.goodId-1] }} {{ this.$store.getters.getParams.sCount }} 개, {{ this.$store.getters.getters.getParams.sWeight }} </p>
+            <p class="info"> {{ this.$store.getters.getGoods[this.$store.getters.getParams.goodId-1].name }} {{ this.$store.getters.getParams.sCount }} 개, {{ this.$store.getters.getParams.sWeight }} </p>
           </div>
           <div class="detail">
             <p class="subject">보내실 보호소</p>
-            <p class="info">청주 유기동물 보호소</p>
-            <p class="info small">경기도 고양시 | 보호동물 211마리</p>
+            <p class="info"> {{ this.$store.getters.getCenters[this.$store.getters.getParams.centerId-1].name }}</p>
+            <p class="info small"> {{ this.$store.getters.getCenters[this.$store.getters.getParams.centerId-1].address }} | 보호동물 {{ this.$store.getters.getCenters[this.$store.getters.getParams.centerId-1].num_cats }} 마리</p>
           </div>
         </div>
       </div>
