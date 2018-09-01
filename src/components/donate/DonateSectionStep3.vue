@@ -33,14 +33,32 @@
         </div>
       </div>
     </div>
+    <div class="btnWrap">
+      <div class="btn">
+        <a class="white" href="#" @click="prevStep">이전</a>
+      </div>
+      <div class="btn">
+        <a href="#" @click="nextStep">다음</a>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import DonateSectionStepCommon from '@/components/donate/DonateSectionStepCommon'
+import { DONATE_NEXT_STEP, DONATE_PREV_STEP } from '@/store/actions'
+
 export default {
   components: {
     'donatesection-stepcommon': DonateSectionStepCommon
+  },
+  methods: {
+    prevStep () {
+      this.$store.commit(DONATE_PREV_STEP)
+    },
+    nextStep () {
+      this.$store.commit(DONATE_NEXT_STEP)
+    }
   }
 }
 </script>
