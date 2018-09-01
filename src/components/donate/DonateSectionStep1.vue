@@ -6,17 +6,9 @@
       </slot>
     </donatesection-stepcommon>
     <div class="boxWrap" v-show="this.$store.getters.getDonateStep === 1">
-      <div class="box">
-        <div class="info"><img src="../../assets/img/1.jpg" alt="물품사진1"></div>
-        <div class="position">담요 및 이불</div>
-      </div>
-      <div class="box">
-        <div class="info"><img src="../../assets/img/2.jpg" alt="물품사진2"></div>
-        <div class="position">사료 및 간식</div>
-      </div>
-      <div class="box">
-        <div class="info"><img src="../../assets/img/3.jpg" alt="물품사진3"></div>
-        <div class="position">기타물품</div>
+      <div class="box" v-for="(item, index) in this.$store.getters.getGoods" :key="index">
+        <div class="info" @click="selectGood(item.id)"><img :src="item.image_url" alt="물품사진1"></div>
+        <div class="position">{{ item.name }}</div>
       </div>
     </div>
     <donatesection-stepbuttons></donatesection-stepbuttons>
@@ -26,11 +18,26 @@
 <script>
 import DonateSectionStepCommon from '@/components/donate/DonateSectionStepCommon'
 import DonateSectionStepButtons from '@/components/donate/DonateSectionStepButtons'
-
+import { GET_GOODS_REQUEST, SET_PARAM, GET_CENTERS_REQUEST } from '@/store/actions'
 export default {
   components: {
     'donatesection-stepcommon': DonateSectionStepCommon,
     'donatesection-stepbuttons': DonateSectionStepButtons
+  },
+  created () {
+    this.$store.dispatch(GET_GOODS_REQUEST)
+      .then(() => {
+        console.log('success')
+      })
+  },
+  methods: {
+    selectGood (goodId) {
+      this.$store.commit(SET_PARAM, {key: 'goodId', data: goodId})
+      this.$store.dispatch(GET_CENTERS_REQUEST, {goodId: this.$store.getters.getParams.goodId})
+        .then(() => {
+          console.log('success')
+        })
+    }
   }
 }
 </script>
