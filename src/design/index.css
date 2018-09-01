@@ -29,7 +29,7 @@ section .mainWrap .section1 .wrap .btn a{color:#fff; width:300px; height:100%; d
 section .mainWrap .section2{background-color: #ededed;}
 section .mainWrap .section2 .wrap{padding: 50px 0px;width: 1080px;margin: 0 auto;}
 section .mainWrap .section2 .wrap .boxWrap{padding-top:50px;}
-section .mainWrap .section2 .wrap .boxWrap .box{display:inline-block; width:33%;}
+section .mainWrap .section2 .wrap .boxWrap .box{display:inline-block; width:32%;}
 section .mainWrap .section2 .wrap .boxWrap .box .image{text-align: center;padding-bottom:15px;}
 section .mainWrap .section2 .wrap .boxWrap .box .info{padding: 150px 0px;font-size: 22px;text-align: center;background-color: #fff;}
 section .mainWrap .section2 .wrap .boxWrap .box .position{font-size: 25px;text-align: center;padding:60px 0px;}
@@ -64,7 +64,7 @@ section .mainWrap .pageWrap .container .progressbar li.active:before {border-col
 section .mainWrap .pageWrap .container .progressbar li.active:after {background-color: #fcac2c;background-color: #fcac2c;}
 
 section .mainWrap .pageWrap .boxWrap{padding-top:50px;}
-section .mainWrap .pageWrap .boxWrap .box{display:inline-block; width:33%;}
+section .mainWrap .pageWrap .boxWrap .box{display:inline-block; width:32%;}
 section .mainWrap .pageWrap .boxWrap .box .info{font-size: 22px;text-align: center;background-color: #fff;max-height:350px;}
 section .mainWrap .pageWrap .boxWrap .box .info img{width:70%;}
 section .mainWrap .pageWrap .boxWrap .box .position{    width: 23%;text-align: center;border-bottom: 2px solid #c3c3c3;padding: 16px 0px 10px;margin: 0 auto; }

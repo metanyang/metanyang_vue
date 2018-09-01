@@ -104,7 +104,7 @@ section .mainWrap .section2 .wrap .boxWrap {
 
 section .mainWrap .section2 .wrap .boxWrap .box {
   display: inline-block;
-  width: 33%;
+  width: 30%;
 }
 
 section .mainWrap .section2 .wrap .boxWrap .box .info {
