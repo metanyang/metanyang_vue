@@ -2,6 +2,7 @@
 
 .bold{font-weight: bold;}
 .point1{color: #fcac2c;}
+.point2{color:#626262;font-size: 20px;}
 
 header{height: 88px;width: 100%;}
 header .headerWrap{width:1080px; margin:0px auto; padding-top:33px;}
@@ -12,6 +13,7 @@ header .headerWrap .menuWrap{float:right;}
 header .headerWrap .menuWrap ul li{float:left; padding-left: 23px;}
 header .headerWrap .menuWrap ul li a{font-size: 18px;color: #fcac2c;}
 
+section{min-height: 100%;height: 100%;}
 section .mainWrap{width:100%; margin:0 auto;}
 section .mainWrap .section{height: 800px;}
 section .mainWrap .section .title{font-size: 36px; font-weight:bold;text-align: center;}
@@ -35,7 +37,7 @@ section .mainWrap .section3 .bx-wrapper img{height:500px;}
 
 section .mainWrap .pageWrap{width:1080px; margin:0 auto;}
 section .mainWrap .pageWrap .title{padding-top:50px;font-size: 36px; font-weight:bold;text-align: center;}
-section .mainWrap .pageWrap .sub{padding-top:40px;text-align: center;}
+section .mainWrap .pageWrap .sub{padding-top:40px;text-align: center;color:#7b7b7b;}
 section .mainWrap .pageWrap .container{width: 600px;margin: 0 auto; padding-top:30px;}
 
 
@@ -58,8 +60,8 @@ section .mainWrap .pageWrap .boxWrap .box .position{font-size:20px;text-align: c
 section .mainWrap .pageWrap .btnWrap{width:100%;margin:0 auto;text-align:center;padding-top:20px;}
 
 section .mainWrap .pageWrap .btnWrap .btn{display: inline-block;padding-bottom: 50px;}
-section .mainWrap .pageWrap .btnWrap .btn a{color:#fff; width:200px; height:100%; display:block; padding:28px 0px;background-color:#fcac2c;text-align: center;border-radius: 30px;}
-section .mainWrap .pageWrap .btnWrap .btn a.white{width:200px; height:100%; display:block; padding:28px 0px;color:#c3c3c3;border:1px solid #c3c3c3;text-align: center;border-radius: 30px;background-color: #fff;}
+section .mainWrap .pageWrap .btnWrap .btn a{color:#fff; width:200px; height:100%; display:block; padding:20px 0px;background-color:#fcac2c;text-align: center;border-radius: 30px;}
+section .mainWrap .pageWrap .btnWrap .btn a.white{width:200px; height:100%; display:block; padding:20px 0px;color:#c3c3c3;border:1px solid #c3c3c3;text-align: center;border-radius: 30px;background-color: #fff;}
 
 section .mainWrap .pageWrap .boxWrap .inputWrap{padding-bottom: 20px;margin: 0 auto;}
 section .mainWrap .pageWrap .boxWrap .inputWrap .inputSub{width:49%;display: inline-block;}
@@ -88,4 +90,25 @@ section .mainWrap .pageWrap .boxWrap .resultWrap .inner .detail{width:49%;displa
 section .mainWrap .pageWrap .boxWrap .resultWrap .inner .detail .info{color:#626262;padding-top:15px;}
 section .mainWrap .pageWrap .boxWrap .resultWrap .inner .detail .small{font-size: 13px;padding-top:5px;}
 
-footer{background-color: #ededed; min-height: 132px; width:100%;}
+/*shelter*/
+section .mainWrap .pageWrap .shelterViewWrap{margin-top:20px;border-radius: 10px;border: solid 1px #b8b8b8;}
+section .mainWrap .pageWrap .shelterViewWrap ul li{padding: 11px 0px;border-bottom: solid 1px #b8b8b8;}
+section .mainWrap .pageWrap .shelterViewWrap ul li:last-child{border-bottom: 0px;padding:0px;background-color: #e6e6e6;border-radius: 0px 0px 10px 10px;}
+section .mainWrap .pageWrap .shelterViewWrap ul li .donateName{width:20%;display: inline-block;padding-left:20px;}
+section .mainWrap .pageWrap .shelterViewWrap ul li .donateProduct{width:50%;display: inline-block;padding-left:20px;}
+section .mainWrap .pageWrap .shelterViewWrap ul li .btnWrap{width:20%;display: inline-block;padding:0px;text-align: right;}
+section .mainWrap .pageWrap .shelterViewWrap ul li .btnWrap .stateBtn{display: inline-block;}
+section .mainWrap .pageWrap .shelterViewWrap ul li .btnWrap .stateBtn a{height: 100%;display: block;padding: 10px 20px;background-color: #fff;border:1px solid #b8b8b8;color:#b8b8b8;text-align: center;border-radius: 30px;}
+section .mainWrap .pageWrap .shelterViewWrap ul li .btnWrap .stateBtn a.active{color: #fff;background-color: #67adf6;border:0px;}
+section .mainWrap .pageWrap .shelterViewWrap ul li .showMore{display: inline-block;cursor: pointer;text-align: center;width: 100%;color:#626262;padding:10px 0px;}
+section .mainWrap .pageWrap .donatorInfo{color:#7b7b7b;width:100%;padding:10px 0px;border-radius: 10px;background-color:#e6e6e6;text-align: center;border:0px;margin-top:50px;}
+section .mainWrap .pageWrap .donatorInfo span{color:#626262;font-size: 20px;}
+section .mainWrap .pageWrap .memoWrap{padding-bottom:50px;}
+section .mainWrap .pageWrap .memoWrap p{padding-top:20px;color: #262626;font-size: 20px;}
+section .mainWrap .pageWrap .memoWrap textarea{width: 100%;border: solid 1px #b8b8b8;border-radius: 10px;padding: 10px;margin-top:10px;color:#626262;}
+section .mainWrap .pageWrap .memoWrap .attachFile{border: solid 1px #b8b8b8;border-radius: 10px;padding:10px;margin-top:10px;}
+section .mainWrap .pageWrap .memoWrap .attachFile .wrap{width:80%;margin: 0 auto;text-align: center;}
+section .mainWrap .pageWrap .memoWrap .attachFile .txt{text-align: center;color: #626262;}
+section .mainWrap .pageWrap .memoWrap .attachFile .txt img{width:20px;height:20px;padding: 4px 10px 0px;}
+
+footer .footerWrap{color:#626262;text-align: center;padding: 30px 0px;width: 1080px;margin: 0 auto;}

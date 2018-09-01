@@ -6,9 +6,21 @@
 		<link href='http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+		<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript">
+			function showList() {
+				alert('더보기');
+			}
+		</script>
 	</head>
 	<body>
 		<header>
+			<div id="before">
+
+			</div>
+			<div id="after">
+
+			</div>
 			<div class="headerWrap">
 				<div class="logoWrap">
 					<div class="imageWrap">
@@ -29,34 +41,31 @@
 		<section>
 			<div class="mainWrap">
 				<div class="pageWrap">
-					<div class="title">기부하기</div>
-					<div class="sub">후원을 결정해주셔서 감사합니다.<br>어떤 물품을 후원해주시겠어요?</div>
-					<div class="container">
-				      <ul class="progressbar">
-				          <li class="active">물품선택</li>
-				          <li class="active">정보입력</li>
-				          <li>뫄뫄</li>
-				          <li>완료</li>
-  						</ul>
-							<div class="clearfix"></div>
+					<div class="title">받은 후원</div>
+					<div class="sub">
+						후원 물품을 무사히 수령하셨나요? <br>
+						후원자님께 감사의 인사를 전해주세요.
 					</div>
-					<div class="boxWrap">
-						<div class="box">
-							<div class="info"><img src="../img/1.jpg" alt="물품사진1"></div>
-							<div class="position">담요 및 이불</div>
-						</div>
-						<div class="box">
-							<div class="info"><img src="../img/2.jpg" alt="물품사진2"></div>
-							<div class="position">사료 및 간식</div>
-						</div>
-						<div class="box">
-							<div class="info"><img src="../img/3.jpg" alt="물품사진3"></div>
-							<div class="position">기타물품</div>
+					<div class="donatorInfo">
+					 	<span>이** 님</span> | 서울시 마포구 노고산동 | 담요 및 이불 3개, 7kg 이상
+					</div>
+					<div class="memoWrap">
+						<p>메모</p>
+						<textarea name="meno" rows="8" cols="80" placeholder="메모를 입력해주세요"></textarea>
+
+						<p>사진첨부</p>
+						<div class="attachFile">
+							<div class="wrap">
+								<div class="txt"><img src="../img/attach.png">파일을 드래그하거나 클릭하세요</div>
+							</div>
 						</div>
 					</div>
 					<div class="btnWrap">
 						<div class="btn">
-							<a href="#">다음</a>
+							<a href="#" class="white">이전</a>
+						</div>
+						<div class="btn">
+							<a href="#">전송</a>
 						</div>
 					</div>
 				</div>
