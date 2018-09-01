@@ -1,3 +1,5 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
 .bold {
   font-weight: bold;
 }
@@ -6,15 +8,19 @@
   color: #fcac2c;
 }
 
+body {
+  font-family: 'Spoqa Han Sans';
+}
+
 header {
-  height: 88px;
   width: 100%;
+  height: 40px;
+  padding: 24px 0;
 }
 
 header .headerWrap {
   width: 1080px;
   margin: 0px auto;
-  padding-top: 33px;
 }
 
 header .headerWrap .logoWrap {
@@ -22,12 +28,16 @@ header .headerWrap .logoWrap {
 }
 
 header .headerWrap .logoWrap .imageWrap a {
+  font-size: 24px;
+  font-weight: bold;
   color: #fcac2c;
 }
 
 /* header .headerWrap .logoWrap .imageWrap a{width:100px;height:100px;background-size: 100%; background-image: url('./img/logo.jpg');display:block;} */
 header .headerWrap .menuWrap {
   float: right;
+  padding-top: 10px;
+  line-height: 18px;
 }
 
 header .headerWrap .menuWrap ul li {
@@ -46,7 +56,7 @@ section .mainWrap {
 }
 
 section .mainWrap .section {
-  height: 800px;
+  height: auto;
 }
 
 section .mainWrap .section .title {
@@ -56,13 +66,28 @@ section .mainWrap .section .title {
 }
 
 section .mainWrap .section1 {
-  background-color: #d8d8d8;
+  background-image: url('../assets/img/jumbotron.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 section .mainWrap .section1 .wrap {
   padding: 201px 0px;
   width: 1080px;
   margin: 0 auto;
+}
+
+section .mainWrap .section1 .wrap .info {
+  color: #fff;
+}
+
+section .mainWrap .section1 .wrap .info .subIMainSection1nfo {
+  opacity: 0.7;
+  font-size: 22px;
+  font-family: 'Spoqa Han Sans';
+  width: 131px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #fff;
 }
 
 section .mainWrap .section1 .wrap .info .subInfo {
@@ -72,48 +97,98 @@ section .mainWrap .section1 .wrap .info .subInfo {
 }
 
 section .mainWrap .section1 .wrap .info .mainInfo {
+  font-family: 'Spoqa Han Sans';
   font-size: 48px;
   padding: 20px 0px;
+  font-weight: 300;
 }
 
 section .mainWrap .section1 .wrap .btn {
-  display: inline-block;
+  width: 228px;
+  height: 74px;
+  margin-top: 36px;
+  border-radius: 36px;
+  background-color: #fcac2c;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section .mainWrap .section1 .wrap .btn a {
-  color: #fff;
-  width: 300px;
-  height: 100%;
-  display: block;
-  padding: 28px 0px;
-  background-color: #fcac2c;
-  text-align: center;
+  display: inline-block;
+  font-family: 'Spoqa Han Sans';
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 section .mainWrap .section2 {
-  background-color: #ededed;
 }
 
 section .mainWrap .section2 .wrap {
-  padding: 50px 0px;
+  padding: 84px 0px;
   width: 1080px;
   margin: 0 auto;
 }
 
+section .mainWrap .section2 .wrap .title {
+  font-family: 'Spoqa Han Sans';
+  font-size: 36px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffaf2f;
+}
+
 section .mainWrap .section2 .wrap .boxWrap {
-  padding-top: 50px;
+  padding-top: 84px;
+  display: flex;
+  justify-content: center;
 }
 
 section .mainWrap .section2 .wrap .boxWrap .box {
-  display: inline-block;
-  width: 32%;
+  width: 380px;
+  height: 364px;
+  margin: 0 26px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: solid 1px #c3c3c3;
+}
+
+section .mainWrap .section2 .wrap .boxWrap .box .image {
+  position: relative;
+  margin: 48px auto;
+  margin-bottom: 0px;
+  width: 160px;
+  height: 160px;
+}
+
+section .mainWrap .section2 .wrap .boxWrap .box .image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 section .mainWrap .section2 .wrap .boxWrap .box .info {
-  padding: 150px 0px;
-  font-size: 22px;
+  padding: 36px 0px;
   text-align: center;
-  background-color: #fff;
+  font-family: 'Spoqa Han Sans';
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-align: center;
+  color: #626262;
+  max-width: 258px;
+  margin: 0 auto;
 }
 
 section .mainWrap .section2 .wrap .boxWrap .box .position {
@@ -129,6 +204,57 @@ section .mainWrap .section3 .bx-wrapper {
 
 section .mainWrap .section3 .bx-wrapper img {
   height: 500px;
+}
+
+section .mainWrap .section3 {
+  width: 100%;
+  background-image: url('../assets/img/bottom_background.jpg');
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+section .mainWrap .section3 .wrap {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+section .mainWrap .section3 .wrap .title {
+  padding-top: 108px;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.33;
+  color: #fff;
+}
+
+section .mainWrap .section3 .wrap .content {
+  margin-top: 38px;
+  padding-bottom: 118px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+section .mainWrap .section4 {
+  width: 100%;
+  text-align: center;
+  color: #626262;
+  background-color: #ededed;
+  border-bottom: solid 2px rgba(98, 98, 98, .15);
+}
+
+section .mainWrap .section4 .wrap .title {
+  padding-top: 64px;
+  height: 48px;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+section .mainWrap .section4 .wrap .content {
+  margin-top: 28px;
+  height: 64px;
+  font-size: 20px;
+  padding-bottom: 74px;
 }
 
 section .mainWrap .pageWrap {
@@ -432,9 +558,17 @@ section .mainWrap .pageWrap .boxWrap .resultWrap .inner .detail .small {
 
 footer {
   background-color: #ededed;
-  min-height: 132px;
+  height: 126px;
   width: 100%;
+  text-align: center;
 }
+
+footer .content {
+  padding-top: 46px;
+  color: #626262;
+  opacity: 0.5;
+}
+
 /*******************************************************************
   Reset
 ********************************************************************/

@@ -1,19 +1,25 @@
 <template>
   <div class="section section2">
     <div class="wrap">
-      <div class="title">메타냥 서비스가 하는 일</div>
+      <div class="title">BlanCat은 어떤 일을 하나요?</div>
       <div class="boxWrap">
         <div class="box">
-          <div class="info">어디로 보낼지 알아보는 수고 없음. <br>자기의 후원에 대한 피드백</div>
-          <div class="position">기부자</div>
+          <div class="image">
+            <img src="../../assets/img/img-donator.svg" />
+          </div>
+          <div class="info"><b>기부자</b>는 편하고 빠르게<br />보호소에 도움을 줄 수 있습니다</div>
         </div>
         <div class="box">
-          <div class="info">부족한 물품들 후원 받음<br>동물 유기 가능성 줄임</div>
-          <div class="position">보호소</div>
+          <div class="image">
+            <img src="../../assets/img/img-cat.svg" />
+          </div>
+          <div class="info"><b>유기동물</b>은 더 나은 환경과<br />입양의 기회를 제공받습니다</div>
         </div>
         <div class="box">
-          <div class="info">따뜻하게 보내고<br>입양 가능성 높임</div>
-          <div class="position">유기동물들</div>
+          <div class="image">
+            <img src="../../assets/img/img-house.svg" />
+          </div>
+          <div class="info"><b>보호소</b>는 유기의 걱정 없이<br />다양한 후원을 받을 수 있습니다</div>
         </div>
       </div>
     </div>

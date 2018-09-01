@@ -1,7 +1,9 @@
 <template>
-  <div class="footerWrap">
-    Copyright © 2018 BlanCat. All rights reserved.
-  </div>
+  <footer>
+    <div class="content">
+      Copyright © 2018 BlanCat. All rights reserved.
+    </div>
+  </footer>
 </template>
 
 <script>
