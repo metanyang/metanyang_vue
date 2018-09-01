@@ -44,6 +44,46 @@ const mutations = {
   },
   [DONATE_PREV_STEP]: state => {
     state.donateStep -= 1
+  },
+  [GET_GOODS_REQUEST]: state => {
+    state.status.goods = 'loading'
+  },
+  [GET_GOODS_SUCCESS]: (state, res) => {
+    state.status.goods = 'success'
+    console.log(res)
+  },
+  [GET_GOODS_FAILED]: state => {
+    state.status.goods = 'error'
+  },
+  [GET_CENTERS_REQUEST]: state => {
+    state.status.centers = 'loading'
+  },
+  [GET_CENTERS_SUCCESS]: (state, res) => {
+    state.status.centers = 'success'
+    console.log(res)
+  },
+  [GET_CENTERS_FAILED]: state => {
+    state.status.centers = 'error'
+  },
+  [POST_SPONSERSHIPS_REQUEST]: state => {
+    state.status.sponserships = 'loading'
+  },
+  [POST_SPONSERSHIPS_SUCCESS]: (state, res) => {
+    state.status.sponserships = 'success'
+    console.log(res)
+  },
+  [POST_SPONSERSHIPS_FAILED]: state => {
+    state.status.sponserships = 'error'
+  },
+  [GET_CENTER_SPONSERSHIPS_REQUEST]: state => {
+    state.status.center_sponserships = 'loading'
+  },
+  [GET_CENTER_SPONSERSHIPS_SUCCESS]: (state, res) => {
+    state.status.center_sponserships = 'success'
+    console.log(res)
+  },
+  [GET_CENTER_SPONSERSHIPS_FAILED]: state => {
+    state.status.center_sponserships = 'error'
   }
 }
 
@@ -54,6 +94,53 @@ const actions = {
       $http.get('/goods')
         .then(res => {
           commit(GET_GOODS_SUCCESS, res)
+          resolve()
+        })
+        .catch(err => {
+          commit(GET_GOODS_FAILED)
+          reject(err)
+        })
+    })
+  },
+  [GET_CENTERS_REQUEST]: ({commit, state, getters, rootGetters}, goodId) => {
+    commit(GET_CENTERS_REQUEST)
+    return new Promise((resolve, reject) => {
+      $http.get(`/centers?good_id=${goodId}`)
+        .then(res => {
+          commit(GET_CENTERS_SUCCESS, res)
+          resolve()
+        })
+        .catch(err => {
+          commit(GET_CENTERS_FAILED)
+          reject(err)
+        })
+    })
+  },
+  [POST_SPONSERSHIPS_REQUEST]: ({commit, state, getters, rootGetters}, params) => {
+    commit(POST_SPONSERSHIPS_REQUEST)
+    return new Promise((resolve, reject) => {
+      $http.post(`/sponserships`, params)
+        .then(res => {
+          commit(POST_SPONSERSHIPS_SUCCESS, res)
+          resolve()
+        })
+        .catch(err => {
+          commit(POST_SPONSERSHIPS_FAILED)
+          reject(err)
+        })
+    })
+  },
+  [GET_CENTER_SPONSERSHIPS_REQUEST]: ({commit, state, getters, rootGetters}, centerId) => {
+    commit(GET_CENTER_SPONSERSHIPS_REQUEST)
+    return new Promise((resolve, reject) => {
+      $http.get(`/centers/${centerId}/sponserships`)
+        .then(res => {
+          commit(GET_CENTER_SPONSERSHIPS_SUCCESS, res)
+          resolve()
+        })
+        .catch(err => {
+          commit(GET_CENTER_SPONSERSHIPS_FAILED)
+          reject(err)
         })
     })
   }

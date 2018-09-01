@@ -26,11 +26,18 @@
 <script>
 import DonateSectionStepCommon from '@/components/donate/DonateSectionStepCommon'
 import DonateSectionStepButtons from '@/components/donate/DonateSectionStepButtons'
-
+import { GET_GOODS_REQUEST } from '@/store/actions'
 export default {
   components: {
     'donatesection-stepcommon': DonateSectionStepCommon,
     'donatesection-stepbuttons': DonateSectionStepButtons
+  },
+  created () {
+    this.$store.dispatch(GET_GOODS_REQUEST)
+      .then(() => {
+        console.log('success')
+        //console.log(this.$store.getters.getGoods)
+      })
   }
 }
 </script>
