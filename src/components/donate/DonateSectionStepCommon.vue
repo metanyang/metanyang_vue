@@ -4,9 +4,9 @@
     <div class="sub"><slot></slot> </div>
     <div class="container">
       <ul class="progressbar">
-          <li :class="{ active: this.$store.getters.getDonateStep > 0 }">물품선택</li>
-          <li :class="{ active: this.$store.getters.getDonateStep > 1 }">정보입력</li>
-          <li :class="{ active: this.$store.getters.getDonateStep > 2 }">뫄뫄</li>
+          <li :class="{ active: this.$store.getters.getDonateStep > 0 }">물품 선택</li>
+          <li :class="{ active: this.$store.getters.getDonateStep > 1 }">정보 입력</li>
+          <li :class="{ active: this.$store.getters.getDonateStep > 2 }">정보 확인</li>
           <li :class="{ active: this.$store.getters.getDonateStep > 3 }">완료</li>
       </ul>
       <div class="clearfix"></div>
