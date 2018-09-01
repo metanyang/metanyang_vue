@@ -8,7 +8,7 @@
 header{height: 88px;width: 100%;}
 header .headerWrap{width:1080px; margin:0px auto; padding-top:33px;}
 header .headerWrap .logoWrap{float:left;}
-header .headerWrap .logoWrap .imageWrap a{color: #fcac2c;}
+header .headerWrap .logoWrap .imageWrap a{color: #fcac2c;font-size: 20px;color: #fcac2c;font-weight: bold;}
 /* header .headerWrap .logoWrap .imageWrap a{width:100px;height:100px;background-size: 100%; background-image: url('./img/logo.jpg');display:block;} */
 header .headerWrap .menuWrap{float:right;}
 header .headerWrap .menuWrap ul li{float:left; padding-left: 23px;}
