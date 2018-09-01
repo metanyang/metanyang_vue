@@ -55,6 +55,7 @@ const state = {
 
 const getters = {
   getDonateStep: state => state.donateStep,
+  getShelterStep: state => state.shelterStep,
   getGoods: state => state.data.goods,
   getCenters: state => state.data.centers,
   getSponserships: state => state.data.sponserships,
