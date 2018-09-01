@@ -65,9 +65,9 @@ section .mainWrap .pageWrap .container .progressbar li.active:after {background-
 
 section .mainWrap .pageWrap .boxWrap{padding-top:50px;}
 section .mainWrap .pageWrap .boxWrap .box{display:inline-block; width:33%;}
-section .mainWrap .pageWrap .boxWrap .box .info{font-size: 22px;text-align: center;background-color: #fff;box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);max-height:350px;}
-section .mainWrap .pageWrap .boxWrap .box .info img{width:100%;}
-section .mainWrap .pageWrap .boxWrap .box .position{font-size:20px;text-align: center;padding: 40px 0px 70px;}
+section .mainWrap .pageWrap .boxWrap .box .info{font-size: 22px;text-align: center;background-color: #fff;max-height:350px;}
+section .mainWrap .pageWrap .boxWrap .box .info img{width:70%;}
+section .mainWrap .pageWrap .boxWrap .box .position{    width: 23%;text-align: center;border-bottom: 2px solid #c3c3c3;padding: 16px 0px 10px;margin: 0 auto; }
 section .mainWrap .pageWrap .btnWrap{width:100%;margin:0 auto;text-align:center;padding-top:20px;}
 
 section .mainWrap .pageWrap .btnWrap .btn{display: inline-block;padding-bottom: 50px;}
