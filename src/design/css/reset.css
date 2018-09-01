@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*******************************************************************
+	Reset
+********************************************************************/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,details,menu,figure,figcaption{display:block;border:0;*margin:0;*padding:0;*font-size:0}/* html5 */
+table{width:100%;border-collapse:collapse;border-spacing:0}
+fieldset,img,iframe{border:0}
+img{vertical-align:top}
+dl,dd,dt,ul,ol,li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+caption,legend{display:none}
+html{width:100%;min-height:100%}
+
+a{outline:0; border:0; color:#333; text-decoration:none;}
+
+.clearfix{clear:both;}
+.clearFix:after{display:block;clear:both;content:""}
+.blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+
+/* Common */
+.al{text-align:left !important}
+.ac{text-align:center !important}
+.ar{text-align:right !important}
+.vt{vertical-align:top !important}
