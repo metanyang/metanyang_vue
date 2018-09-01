@@ -24,7 +24,7 @@ section .mainWrap .section .title{font-size: 36px; font-weight:bold;text-align: 
 section .mainWrap .section1{background-image: url('../assets/img/jumbotron.jpg'); background-position: center; background-size: cover;}
 section .mainWrap .section1 .wrap{padding:201px 0px;width: 1080px;margin: 0 auto;}
 section .mainWrap .section1 .wrap .info {color: #fff;}
-section .mainWrap .section1 .wrap .info .subIMainSectionInfo {opacity: 0.7; font-size: 22px; width: 131px; padding-bottom: 15px; border-bottom: solid 1px #fff;}
+section .mainWrap .section1 .wrap .info .subIMainSection1nfo {opacity: 0.7; font-size: 22px; width: 131px; padding-bottom: 15px; border-bottom: solid 1px #fff;}
 section .mainWrap .section1 .wrap .info .subInfo{font-size: 22px; border-bottom: 1px solid #000;display: inline-block;}
 section .mainWrap .section1 .wrap .info .mainInfo{font-size: 48px;padding:20px 0px;font-weight:300;}
 section .mainWrap .section1 .wrap .btn{width: 228px; height: 74px; margin-top: 36px; border-radius: 36px; background-color: #fcac2c; line-height: 1; display: flex; justify-content: center; align-items: center;}
@@ -35,7 +35,7 @@ section .mainWrap .section2 .wrap .title{font-size: 36px; font-weight: bold; lin
 section .mainWrap .section2 .wrap .boxWrap{padding-top:84px; display:flex; justify-content: center;}
 section .mainWrap .section2 .wrap .boxWrap .box{width: 380px; height: 364px; margin: 0 26px; object-fit: contain; border-radius: 8px; background-color: #fff; border: solid 1px #c3c3c3;}
 section .mainWrap .section2 .wrap .boxWrap .box .image{position: relative; margin: 48px auto; margin-bottom: 0px; width: 160px; height: 160px;}
-section .mainWrap .section2 .wrap .boxWrap .box .image img{padding: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+section .mainWrap .section2 .wrap .boxWrap .box .image img{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 section .mainWrap .section2 .wrap .boxWrap .box .info{padding: 36px 0px;text-align: center;font-size: 20px;line-height:1.6;color: #626262;max-width: 258px; margin: 0 auto;}
 section .mainWrap .section2 .wrap .boxWrap .box .position{font-size: 25px;text-align: center;padding:60px 0px;}
 
