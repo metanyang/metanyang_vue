@@ -1,3 +1,5 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css); 
+
 .bold{font-weight: bold;}
 .point1{color: #fcac2c;}
 .point2{color:#626262;font-size: 20px;}
@@ -26,7 +28,7 @@ section .mainWrap .section1 .wrap{padding:201px 0px;width: 1080px;margin: 0 auto
 section .mainWrap .section1 .wrap .info {color: #fff;}
 section .mainWrap .section1 .wrap .info .subIMainSection1nfo {opacity: 0.7; font-size: 22px; width: 131px; padding-bottom: 15px; border-bottom: solid 1px #fff;}
 section .mainWrap .section1 .wrap .info .subInfo{font-size: 22px; border-bottom: 1px solid #000;display: inline-block;}
-section .mainWrap .section1 .wrap .info .mainInfo{font-size: 48px;padding:20px 0px;font-weight:300;}
+section .mainWrap .section1 .wrap .info .mainInfo{font-size: 48px;padding:20px 0px;font-weight:300;line-height:70px;}
 section .mainWrap .section1 .wrap .btn{width: 228px; height: 74px; margin-top: 36px; border-radius: 36px; background-color: #fcac2c; line-height: 1; display: flex; justify-content: center; align-items: center;}
 section .mainWrap .section1 .wrap .btn a{display:inline-block; font-size: 22px; font-weight: bold; color: #fff;}
 
