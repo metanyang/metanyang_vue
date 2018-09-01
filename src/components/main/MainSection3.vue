@@ -1,5 +1,5 @@
 <template>
-  <div class="section section3">
+  <div class="section3">
     <div class="wrap">
       <div class="title">
         고양시 유기동물 보호소의 해피 이야기

@@ -30,11 +30,21 @@ section .mainWrap .section2{background-color: #ededed;}
 section .mainWrap .section2 .wrap{padding: 50px 0px;width: 1080px;margin: 0 auto;}
 section .mainWrap .section2 .wrap .boxWrap{padding-top:50px;}
 section .mainWrap .section2 .wrap .boxWrap .box{display:inline-block; width:33%;}
+section .mainWrap .section2 .wrap .boxWrap .box .image{text-align: center;}
 section .mainWrap .section2 .wrap .boxWrap .box .info{padding: 150px 0px;font-size: 22px;text-align: center;background-color: #fff;}
 section .mainWrap .section2 .wrap .boxWrap .box .position{font-size: 25px;text-align: center;padding:60px 0px;}
 
+section .mainWrap .section3{background-image: url('../assets/img/slider.png');background-repeat: no-repeat;}
 section .mainWrap .section3 .bx-wrapper{width: 100%;margin: 0 auto;}
 section .mainWrap .section3 .bx-wrapper img{height:500px;}
+section .mainWrap .section3 .wrap{width: 100%;margin:0 auto;color:#fff;padding-top: 50px;}
+section .mainWrap .section3 .wrap .title{padding-top:50px;font-size: 25px;text-align: center;}
+section .mainWrap .section3 .wrap .content{text-align:center;padding: 65px 0px;line-height: 1.5em;}
+
+section .mainWrap .section4{background-color: #ededed;padding:100px 0px;}
+section .mainWrap .section4 .wrap{color:##626262;}
+section .mainWrap .section4 .title{font-size: 25px;text-align: center;}
+section .mainWrap .section4 .content{text-align:center;line-height: 1.5em;padding-top:20px;}
 
 section .mainWrap .pageWrap{width:1080px; margin:0 auto;}
 section .mainWrap .pageWrap .title{padding-top:50px;font-size: 36px; font-weight:bold;text-align: center;}

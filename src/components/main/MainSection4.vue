@@ -1,5 +1,5 @@
 <template>
-  <div class="section section4">
+  <div class="section4">
     <div class="wrap">
       <div class="title">
         BlanCat과 함께하고 싶으신가요?
