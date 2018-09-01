@@ -1,13 +1,18 @@
 <template>
   <div>
-    ShelterPage
+    <shelter-section></shelter-section>
   </div>
 </template>
 
 <script>
-export default {
+import ShelterSection from '@/components/shelter/ShelterSection'
 
+export default {
+  components: {
+    'shelter-section': ShelterSection
+  }
 }
+</script>
 </script>
 
 <style>

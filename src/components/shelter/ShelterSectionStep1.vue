@@ -1,9 +1,9 @@
 <template>
   <div class="pageWrap">
     <sheltersection-stepcommon>
-      <slot>후원을 결정해주셔서 감사합니다.</slot>
+      <slot><span class="point2">고양시 유기동물 보호소</span> 님, 안녕하세요.<br>새로 들어온 후원이 <span class="point1">3</span>건 있습니다.</slot>
     </sheltersection-stepcommon>
-    <div class="boxWrap" v-show="this.$store.getters.getDonateStep === 1">
+    <div class="boxWrap" v-show="this.$store.getters.getShelterStep === 1">
     </div>
     <sheltersection-stepbuttons></sheltersection-stepbuttons>
   </div>
