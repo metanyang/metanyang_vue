@@ -3,7 +3,7 @@
     <div class="headerWrap">
       <div class="logoWrap">
         <div class="imageWrap">
-          <router-link to="main">메뉴명</router-link>
+          <router-link to="main">BlanCat</router-link>
         </div>
       </div>
       <div class="menuWrap">

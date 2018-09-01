@@ -9,7 +9,7 @@
           겨울을 따뜻하게 보냈습니다
         </div>
         <div class="btn">
-            <a href="#">기부하기</a>
+            <router-link to="donate">기부하기</router-link>
         </div>
       </div>
     </div>

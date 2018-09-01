@@ -1,16 +1,27 @@
 <template>
   <div class="section3">
-    <div class="bxslider">
-      <!-- <div><img src="./img/1.jpg" title="Funky roots"></div>
-      <div><img src="./img/2.jpg" title="Funky roots"></div>
-      <div><img src="./img/2.jpg" title="Funky roots"></div> -->
-    </div>
+    <carousel :perPage=1>
+      <slide>
+        <img src="../assets/img/1.jpg" title="Funky roots">
+      </slide>
+      <slide>
+        <img src="../assets/img/2.jpg" title="Funky roots">
+      </slide>
+      <slide>
+        <img src="../assets/img/3.jpg" title="Funky roots">
+      </slide>
+    </carousel>
   </div>
 </template>
 
 <script>
-export default {
+import { Carousel, Slide } from 'vue-carousel'
 
+export default {
+  components: {
+    Carousel,
+    Slide
+  }
 }
 </script>
 
