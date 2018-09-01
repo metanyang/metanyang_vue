@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="kor">
+	<head>
+    <title></title>
+    <link rel="stylesheet" href="./css/common.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('.section3 .bxslider').bxSlider({
+				mode: 'fade',
+				auto : true,
+				speed: 500,
+				pager : false
+			});
+		});
+  </script>
+	</head>
+	<body>
+		<header>
+			<div class="headerWrap">
+				<div class="logoWrap">
+					<div class="imageWrap">
+						<a href="#">메뉴명</a>
+					</div>
+				</div>
+				<div class="menuWrap">
+					<ul>
+						<li><a>NEWS</a></li>
+						<li><a>STORY</a></li>
+						<li><a>DONATE</a></li>
+						<li><a>SHELTER</a></li>
+						<li><a>CONTACT</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="mainWrap">
+				<div class="section section1">
+					<div class="wrap">
+						<div class="info">
+							<div class="subInfo">함께, 따뜻하게</div>
+							<div class="mainInfo">
+								여러분의 도움으로 <br>
+								<span class="bold"><span class="point1">1920</span>마리의 유기동물이</span><br>
+								겨울을 따뜻하게 보냈습니다
+							</div>
+							<div class="btn">
+							    <a href="#">기부하기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section section2">
+					<div class="wrap">
+						<div class="title">메타냥 서비스가 하는 일</div>
+						<div class="boxWrap">
+							<div class="box">
+								<div class="info">어디로 보낼지 알아보는 수고 없음. <br>자기의 후원에 대한 피드백</div>
+								<div class="position">기부자</div>
+							</div>
+							<div class="box">
+								<div class="info">부족한 물품들 후원 받음<br>동물 유기 가능성 줄임</div>
+								<div class="position">보호소</div>
+							</div>
+							<div class="box">
+								<div class="info">따뜻하게 보내고<br>입양 가능성 높임</div>
+								<div class="position">유기동물들</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section3">
+					<div class="bxslider">
+				    <div><img src="./img/1.jpg" title="Funky roots"></div>
+				    <div><img src="./img/2.jpg" title="Funky roots"></div>
+						<div><img src="./img/2.jpg" title="Funky roots"></div>
+				  </div>
+				</div>
+			</div>
+		</section>
+		<footer>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+@import url("reset.css");
+
+.bold{font-weight: bold;}
+.point1{color: #fcac2c;}
+
+header{height: 88px;width: 100%;}
+header .headerWrap{margin:0px auto; padding-top:33px;}
+header .headerWrap .logoWrap{float:left;padding-left:88px;}
+header .headerWrap .logoWrap .imageWrap a{color: #fcac2c;}
+/* header .headerWrap .logoWrap .imageWrap a{width:100px;height:100px;background-size: 100%; background-image: url('./img/logo.jpg');display:block;} */
+header .headerWrap .menuWrap{float:right;padding-right:88px;}
+header .headerWrap .menuWrap ul li{float:left;padding:0px 23px;}
+header .headerWrap .menuWrap ul li a{font-size: 18px;color: #fcac2c;}
+
+section .mainWrap{width:100%; margin:0 auto;}
+section .mainWrap .section{height: 800px;}
+section .mainWrap .section .title{padding-top:30px; font-size: 36px; font-weight:bold;text-align: center;}
+
+section .mainWrap .section1{background-color: #d8d8d8;}
+section .mainWrap .section1 .wrap{padding:201px 81px;}
+section .mainWrap .section1 .wrap .info .subInfo{font-size: 22px; border-bottom: 1px solid #000;display: inline-block;}
+section .mainWrap .section1 .wrap .info .mainInfo{font-size: 48px;padding:20px 0px;}
+section .mainWrap .section1 .wrap .btn{display: inline-block;}
+section .mainWrap .section1 .wrap .btn a{color:#fff; width:100%; height:100%; display:block; padding:28px 76px;background-color:#fcac2c;text-align: center;}
+
+section .mainWrap .section2{background-color: #ededed;}
+section .mainWrap .section2 .wrap{padding: 50px 80px 80px;}
+section .mainWrap .section2 .wrap .boxWrap{padding-top:70px;}
+section .mainWrap .section2 .wrap .boxWrap .box{display:inline-block; width:33%;}
+section .mainWrap .section2 .wrap .boxWrap .box .info{padding: 150px 0px;font-size: 22px;text-align: center;background-color: #fff;}
+section .mainWrap .section2 .wrap .boxWrap .box .position{font-size: 25px;text-align: center;padding:60px 0px;}
+
+section .mainWrap .section3 .bx-wrapper{width: 100%;margin: 0 auto;}
+section .mainWrap .section3 .bx-wrapper img{height:500px;}
+
+footer{background-color: #ededed; min-height: 132px;}
