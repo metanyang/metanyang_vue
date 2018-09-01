@@ -15,7 +15,8 @@ import {
   POST_SPONSERSHIPS_SUCCESS,
   GET_CENTER_SPONSERSHIPS_REQUEST,
   GET_CENTER_SPONSERSHIPS_FAILED,
-  GET_CENTER_SPONSERSHIPS_SUCCESS
+  GET_CENTER_SPONSERSHIPS_SUCCESS,
+  SET_PARAM
 } from './actions'
 import { $http } from '@/utils/api'
 
@@ -23,8 +24,24 @@ Vue.use(Vuex)
 
 const state = {
   donateStep: 1,
+  shelterStep: 1,
   status: {
     goods: '',
+    centers: '',
+    sponserships: '',
+    center_sponserships: ''
+  },
+  params: {
+    goodId: '',
+    name: '',
+    email: '',
+    centerId: '',
+    sCount: '',
+    sWeight: '',
+    userId: ''
+  },
+  data: {
+    goods: [],
     centers: '',
     sponserships: '',
     center_sponserships: ''
@@ -32,10 +49,19 @@ const state = {
 }
 
 const getters = {
-  getDonateStep: state => state.donateStep
+  getDonateStep: state => state.donateStep,
+  getGoods: state => state.data.goods,
+  getCenters: state => state.data.centers,
+  getSponserships: state => state.data.sponserships,
+  getCenterSponserships: state => state.data.center_sponserships,
+  getParams: state => state.params
 }
 
 const mutations = {
+  [SET_PARAM]: (state, {key, data}) => {
+    console.log(key, data)
+    state.params[key] = data
+  },
   [DONATE_INIT_STEP]: state => {
     state.donateStep = 1
   },
@@ -50,7 +76,7 @@ const mutations = {
   },
   [GET_GOODS_SUCCESS]: (state, res) => {
     state.status.goods = 'success'
-    console.log(res)
+    state.data.goods = res.data
   },
   [GET_GOODS_FAILED]: state => {
     state.status.goods = 'error'
@@ -60,7 +86,7 @@ const mutations = {
   },
   [GET_CENTERS_SUCCESS]: (state, res) => {
     state.status.centers = 'success'
-    console.log(res)
+    state.data.centers = res.data
   },
   [GET_CENTERS_FAILED]: state => {
     state.status.centers = 'error'
@@ -70,7 +96,7 @@ const mutations = {
   },
   [POST_SPONSERSHIPS_SUCCESS]: (state, res) => {
     state.status.sponserships = 'success'
-    console.log(res)
+    state.data.sponserships = res.data
   },
   [POST_SPONSERSHIPS_FAILED]: state => {
     state.status.sponserships = 'error'
@@ -80,7 +106,7 @@ const mutations = {
   },
   [GET_CENTER_SPONSERSHIPS_SUCCESS]: (state, res) => {
     state.status.center_sponserships = 'success'
-    console.log(res)
+    state.data.center_sponserships = res.data
   },
   [GET_CENTER_SPONSERSHIPS_FAILED]: state => {
     state.status.center_sponserships = 'error'
@@ -102,9 +128,10 @@ const actions = {
         })
     })
   },
-  [GET_CENTERS_REQUEST]: ({commit, state, getters, rootGetters}, goodId) => {
+  [GET_CENTERS_REQUEST]: ({commit, state, getters, rootGetters}, {goodId}) => {
     commit(GET_CENTERS_REQUEST)
     return new Promise((resolve, reject) => {
+      console.log(goodId)
       $http.get(`/centers?good_id=${goodId}`)
         .then(res => {
           commit(GET_CENTERS_SUCCESS, res)
@@ -116,7 +143,7 @@ const actions = {
         })
     })
   },
-  [POST_SPONSERSHIPS_REQUEST]: ({commit, state, getters, rootGetters}, params) => {
+  [POST_SPONSERSHIPS_REQUEST]: ({commit, state, getters, rootGetters}, {params}) => {
     commit(POST_SPONSERSHIPS_REQUEST)
     return new Promise((resolve, reject) => {
       $http.post(`/sponserships`, params)
@@ -130,7 +157,7 @@ const actions = {
         })
     })
   },
-  [GET_CENTER_SPONSERSHIPS_REQUEST]: ({commit, state, getters, rootGetters}, centerId) => {
+  [GET_CENTER_SPONSERSHIPS_REQUEST]: ({commit, state, getters, rootGetters}, {centerId}) => {
     commit(GET_CENTER_SPONSERSHIPS_REQUEST)
     return new Promise((resolve, reject) => {
       $http.get(`/centers/${centerId}/sponserships`)
