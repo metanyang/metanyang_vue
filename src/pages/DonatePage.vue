@@ -1,12 +1,16 @@
 <template>
   <div>
-    DonatePage
+    <donate-section></donate-section>
   </div>
 </template>
 
 <script>
-export default {
+import DonateSection from '@/components/donate/DonateSection'
 
+export default {
+  components: {
+    'donate-section': DonateSection
+  }
 }
 </script>
 

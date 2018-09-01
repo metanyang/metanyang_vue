@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import MainSection1 from '@/components/MainSection1'
-import MainSection2 from '@/components/MainSection2'
-import MainSection3 from '@/components/MainSection3'
+import MainSection1 from '@/components/main/MainSection1'
+import MainSection2 from '@/components/main/MainSection2'
+import MainSection3 from '@/components/main/MainSection3'
 
 export default {
   components: {

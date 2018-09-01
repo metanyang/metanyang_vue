@@ -12,13 +12,13 @@ header {
 }
 
 header .headerWrap {
+  width: 1080px;
   margin: 0px auto;
   padding-top: 33px;
 }
 
 header .headerWrap .logoWrap {
   float: left;
-  padding-left: 88px;
 }
 
 header .headerWrap .logoWrap .imageWrap a {
@@ -28,12 +28,11 @@ header .headerWrap .logoWrap .imageWrap a {
 /* header .headerWrap .logoWrap .imageWrap a{width:100px;height:100px;background-size: 100%; background-image: url('./img/logo.jpg');display:block;} */
 header .headerWrap .menuWrap {
   float: right;
-  padding-right: 88px;
 }
 
 header .headerWrap .menuWrap ul li {
   float: left;
-  padding: 0px 23px;
+  padding-left: 23px;
 }
 
 header .headerWrap .menuWrap ul li a {
@@ -51,7 +50,6 @@ section .mainWrap .section {
 }
 
 section .mainWrap .section .title {
-  padding-top: 30px;
   font-size: 36px;
   font-weight: bold;
   text-align: center;
@@ -62,7 +60,9 @@ section .mainWrap .section1 {
 }
 
 section .mainWrap .section1 .wrap {
-  padding: 201px 81px;
+  padding: 201px 0px;
+  width: 1080px;
+  margin: 0 auto;
 }
 
 section .mainWrap .section1 .wrap .info .subInfo {
@@ -82,10 +82,10 @@ section .mainWrap .section1 .wrap .btn {
 
 section .mainWrap .section1 .wrap .btn a {
   color: #fff;
-  width: 100%;
+  width: 300px;
   height: 100%;
   display: block;
-  padding: 28px 76px;
+  padding: 28px 0px;
   background-color: #fcac2c;
   text-align: center;
 }
@@ -95,16 +95,18 @@ section .mainWrap .section2 {
 }
 
 section .mainWrap .section2 .wrap {
-  padding: 50px 80px 80px;
+  padding: 50px 0px;
+  width: 1080px;
+  margin: 0 auto;
 }
 
 section .mainWrap .section2 .wrap .boxWrap {
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 section .mainWrap .section2 .wrap .boxWrap .box {
   display: inline-block;
-  width: 33%;
+  width: 32%;
 }
 
 section .mainWrap .section2 .wrap .boxWrap .box .info {
@@ -129,13 +131,312 @@ section .mainWrap .section3 .bx-wrapper img {
   height: 500px;
 }
 
+section .mainWrap .pageWrap {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+section .mainWrap .pageWrap .title {
+  padding-top: 50px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+section .mainWrap .pageWrap .sub {
+  padding-top: 40px;
+  text-align: center;
+}
+
+section .mainWrap .pageWrap .container {
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+section .mainWrap .pageWrap .container {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section .mainWrap .pageWrap .container .progressbar {
+  counter-reset: step;
+}
+
+section .mainWrap .pageWrap .container .progressbar li {
+  display: inline-block;
+  width: 20%;
+  position: relative;
+  text-align: center;
+}
+
+section .mainWrap .pageWrap .container .progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  background-color: #fff;
+}
+
+section .mainWrap .pageWrap .container .progressbar li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+
+section .mainWrap .pageWrap .container .progressbar li:first-child:after {
+  content: none;
+}
+
+section .mainWrap .pageWrap .container .progressbar li.active {
+  color: #000;
+}
+
+section .mainWrap .pageWrap .container .progressbar li.active:before {
+  border-color: #fcac2c;
+  background-color: #fcac2c;
+  color: #fff;
+}
+
+section .mainWrap .pageWrap .container .progressbar li.active:before {
+  border-color: #fcac2c;
+  background-color: #fcac2c;
+}
+
+section .mainWrap .pageWrap .container .progressbar li.active:after {
+  background-color: #fcac2c;
+  background-color: #fcac2c;
+}
+
+section .mainWrap .pageWrap .boxWrap {
+  padding-top: 50px;
+}
+
+section .mainWrap .pageWrap .boxWrap .box {
+  display: inline-block;
+  width: 32%;
+}
+
+section .mainWrap .pageWrap .boxWrap .box .info {
+  font-size: 22px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  max-height: 350px;
+}
+
+section .mainWrap .pageWrap .boxWrap .box .info img {
+  width: 100%;
+}
+
+section .mainWrap .pageWrap .boxWrap .box .position {
+  font-size: 20px;
+  text-align: center;
+  padding: 40px 0px 70px;
+}
+
+section .mainWrap .pageWrap .btnWrap {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+section .mainWrap .pageWrap .btnWrap .btn {
+  display: inline-block;
+  padding-bottom: 50px;
+}
+
+section .mainWrap .pageWrap .btnWrap .btn a {
+  color: #fff;
+  width: 200px;
+  height: 100%;
+  display: block;
+  padding: 28px 0px;
+  background-color: #fcac2c;
+  text-align: center;
+  border-radius: 30px;
+}
+
+section .mainWrap .pageWrap .btnWrap .btn a.white {
+  width: 200px;
+  height: 100%;
+  display: block;
+  padding: 28px 0px;
+  color: #c3c3c3;
+  border: 1px solid #c3c3c3;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+section .mainWrap .pageWrap .boxWrap .inputWrap {
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
+section .mainWrap .pageWrap .boxWrap .inputWrap .inputSub {
+  width: 49%;
+  display: inline-block;
+}
+
+section .mainWrap .pageWrap .boxWrap .inputWrap .inputSub .info {
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+section .mainWrap .pageWrap .boxWrap .inputWrap .inputSub input {
+  background-color: #ffffff;
+  border: solid 1px #c2c2c2;
+  width: 96%;
+  padding: 10px 5px;
+  border-radius: 7px;
+}
+
+section .mainWrap .pageWrap .boxWrap .inputWrap .inputSub input.half {
+  width: 46%;
+  display: inline-block;
+}
+
+section .mainWrap .pageWrap .boxWrap .inputWrap .inputSub .infoDetail {
+  color: #7b7b7b;
+}
+
+section .mainWrap .pageWrap .boxWrap .shelterWrap {
+  padding-top: 50px;
+}
+
+section .mainWrap .pageWrap .boxWrap .shelterWrap .info {
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+section .mainWrap .pageWrap .boxWrap .shelterWrap .searchWrap {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  border: solid 1px #c2c2c2;
+  border-radius: 10px;
+}
+
+section .mainWrap .pageWrap .boxWrap .shelterWrap .searchWrap input {
+  left: 9px;
+  position: absolute;
+  width: 85%;
+  text-align: left;
+  padding-left: 14px;
+  margin: 0 auto;
+  border: none;
+  height: 100%;
+  border-right: 10px;
+}
+
+section .mainWrap .pageWrap .boxWrap .shelterWrap .searchWrap .search {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 7px;
+  right: 15px;
+}
+
+section .mainWrap .pageWrap .boxWrap .shelterWrap .searchWrap .search img {
+  width: 20px;
+  height: 20px;
+}
+
+section .mainWrap .pageWrap .boxWrap .shelterWrap .listWrap {
+  position: relative;
+  max-height: 400px;
+  overflow-y: scroll;
+  min-height: 300px;
+  border: solid 1px #c2c2c2;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+section .mainWrap .pageWrap .boxWrap .shelterWrap .listWrap .list {
+  position: relative;
+  top: 10px;
+  padding: 0px 20px;
+}
+
+section .mainWrap .pageWrap .boxWrap .shelterWrap .listWrap .list ul li {
+  padding: 11px 0px;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+section .mainWrap .pageWrap .boxWrap .shelterWrap .listWrap .list ul li:last-child {
+  border: none;
+}
+
+section .mainWrap .pageWrap .boxWrap .shelterWrap .listWrap .list ul li .shelterName {
+  width: 39%;
+  display: inline-block;
+}
+
+section .mainWrap .pageWrap .boxWrap .shelterWrap .listWrap .list ul li .shelterState {
+  width: 60%;
+  display: inline-block;
+  text-align: right;
+}
+
+section .mainWrap .pageWrap .boxWrap .shelterWrap .listWrap .list ul li a {
+  cursor: pointer;
+  color: #c3c3c3;
+}
+
+section .mainWrap .pageWrap .boxWrap .resultWrap {
+  width: 860px;
+  margin: 0 auto;
+  border: solid 1px #c3c3c3;
+}
+
+section .mainWrap .pageWrap .boxWrap .resultWrap .inner {
+  padding: 50px 50px;
+}
+
+section .mainWrap .pageWrap .boxWrap .resultWrap .inner .subject {
+  padding-top: 20px;
+}
+
+section .mainWrap .pageWrap .boxWrap .resultWrap .inner .detail {
+  width: 49%;
+  display: inline-block;
+}
+
+section .mainWrap .pageWrap .boxWrap .resultWrap .inner .detail .info {
+  color: #626262;
+  padding-top: 15px;
+}
+
+section .mainWrap .pageWrap .boxWrap .resultWrap .inner .detail .small {
+  font-size: 13px;
+  padding-top: 5px;
+}
+
 footer {
   background-color: #ededed;
   min-height: 132px;
+  width: 100%;
 }
-
 /*******************************************************************
-	Reset
+  Reset
 ********************************************************************/
 body,
 div,
@@ -235,6 +536,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  min-height: 100%;
+}
+
 .clearfix {
   clear: both;
 }
@@ -273,4 +578,3 @@ a {
 .vt {
   vertical-align: top !important
 }
-
