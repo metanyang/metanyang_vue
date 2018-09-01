@@ -11,14 +11,18 @@
         <div class="position">{{ item.name }}</div>
       </div>
     </div>
-    <donatesection-stepbuttons></donatesection-stepbuttons>
+    <div class="btnWrap">
+      <div class="btn">
+        <a href="#" @click="nextStep">다음</a>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import DonateSectionStepCommon from '@/components/donate/DonateSectionStepCommon'
 import DonateSectionStepButtons from '@/components/donate/DonateSectionStepButtons'
-import { GET_GOODS_REQUEST, SET_PARAM, GET_CENTERS_REQUEST } from '@/store/actions'
+import { GET_GOODS_REQUEST, SET_PARAM, GET_CENTERS_REQUEST, DONATE_NEXT_STEP } from '@/store/actions'
 export default {
   components: {
     'donatesection-stepcommon': DonateSectionStepCommon,
@@ -36,6 +40,13 @@ export default {
       this.$store.dispatch(GET_CENTERS_REQUEST, {goodId: this.$store.getters.getParams.goodId})
         .then(() => {
           console.log('success')
+        })
+    },
+    nextStep () {
+      this.$store.dispatch(GET_CENTERS_REQUEST, {goodId: this.$store.getters.getParams.goodId})
+        .then(() => {
+          console.log('success')
+          this.$store.commit(DONATE_NEXT_STEP)
         })
     }
   }

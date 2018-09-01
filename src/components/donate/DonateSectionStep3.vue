@@ -11,19 +11,19 @@
         <div class="inner">
           <div class="detail">
             <p class="subject">성함</p>
-            <p class="info">메타냥</p>
+            <p class="info">{{ this.$store.getters.getParams.name }}</p>
           </div>
           <div class="detail">
             <p class="subject">보내는 주소</p>
-            <p class="info">서울시 강남구 강남강남강남</p>
+            <p class="info"> {{ this.$store.getters.getParams.myAddress }}</p>
           </div>
           <div class="detail">
             <p class="subject">보내는 분 메일주소</p>
-            <p class="info">test@test.com</p>
+            <p class="info"> {{ this.$store.getters.getParams.email }}</p>
           </div>
           <div class="detail">
             <p class="subject">보내시는 물품</p>
-            <p class="info">담요 및 이불 2개, 5kg ~ 8kg</p>
+            <p class="info"> {{ this.$store.getters.getGoods[this.$store.getters.getParams.goodId-1] }} {{ this.$store.getters.getParams.sCount }} 개, {{ this.$store.getters.getters.getParams.sWeight }} </p>
           </div>
           <div class="detail">
             <p class="subject">보내실 보호소</p>
@@ -33,18 +33,14 @@
         </div>
       </div>
     </div>
-    <donatesection-stepbuttons></donatesection-stepbuttons>
   </div>
 </template>
 
 <script>
 import DonateSectionStepCommon from '@/components/donate/DonateSectionStepCommon'
-import DonateSectionStepButtons from '@/components/donate/DonateSectionStepButtons'
-
 export default {
   components: {
-    'donatesection-stepcommon': DonateSectionStepCommon,
-    'donatesection-stepbuttons': DonateSectionStepButtons
+    'donatesection-stepcommon': DonateSectionStepCommon
   }
 }
 </script>

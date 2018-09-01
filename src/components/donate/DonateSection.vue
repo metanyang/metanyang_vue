@@ -1,10 +1,10 @@
 <template>
   <section>
     <div class="mainWrap">
-      <donatesection-step1 v-show="this.$store.getters.getDonateStep === 1"></donatesection-step1>
-      <donatesection-step2 v-show="this.$store.getters.getDonateStep === 2"></donatesection-step2>
-      <donatesection-step3 v-show="this.$store.getters.getDonateStep === 3"></donatesection-step3>
-      <donatesection-step4 v-show="this.$store.getters.getDonateStep === 4"></donatesection-step4>
+      <donatesection-step1 v-if="this.$store.getters.getDonateStep === 1"></donatesection-step1>
+      <donatesection-step2 v-if="this.$store.getters.getDonateStep === 2"></donatesection-step2>
+      <donatesection-step3 v-if="this.$store.getters.getDonateStep === 3"></donatesection-step3>
+      <donatesection-step4 v-if="this.$store.getters.getDonateStep === 4"></donatesection-step4>
     </div>
   </section>
 </template>
