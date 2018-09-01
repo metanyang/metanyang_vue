@@ -2,6 +2,8 @@
   <section>
     <div class="mainWrap">
       <sheltersection-step1 v-show="this.$store.getters.getShelterStep === 1"></sheltersection-step1>
+      <sheltersection-step2 v-show="this.$store.getters.getShelterStep === 2"></sheltersection-step2>
+      <sheltersection-step3 v-show="this.$store.getters.getShelterStep === 3"></sheltersection-step3>
     </div>
   </section>
 </template>

@@ -4,7 +4,7 @@
       <a class="white" href="#" @click="prevStep">이전</a>
     </div>
     <div class="btn">
-      <a href="#" @click="nextStep" v-show="this.$store.getters.getShelterStep < 2">다음</a>
+      <a href="#" @click="nextStep" v-show="this.$store.getters.getShelterStep < 3">다음</a>
     </div>
     <div class="btn" v-show="this.$store.getters.getShelterStep === 3">
       <router-link to="main" :class="{ white: true }" @click="initStep">메인으로</router-link>

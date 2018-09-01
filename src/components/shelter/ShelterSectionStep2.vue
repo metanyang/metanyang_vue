@@ -1,6 +1,27 @@
 <template>
   <div class="pageWrap">
-    <sheltersection-stepcommon></sheltersection-stepcommon>
+    <sheltersection-stepcommon>
+      <slot>후원 물품을 무사히 수령하셨나요? <br>후원자님께 감사의 인사를 전해주세요.</slot>
+    </sheltersection-stepcommon>
+    <div v-show="this.$store.getters.getShelterStep === 2">
+      <div class="donatorInfo">
+        <span>이** 님</span> | 서울시 마포구 노고산동 | 담요 및 이불 3개, 7kg 이상
+      </div>
+      <div class="memoWrap">
+        <p>메모</p>
+        <textarea name="meno" rows="8" cols="80" placeholder="메모를 입력해주세요"></textarea>
+
+        <p>사진첨부</p>
+        <div class="attachFile">
+          <div class="wrap">
+            <div class="txt" onclick="attach_file(); return false;">
+              <img src="../../assets/img/attach.png"><span>파일을 업로드 해주세요.</span>
+              <input type="text" id="file_name" value="" style="border:none;font-size:15px;display:none;"></div>
+            <input type="file" id="attach_file" name="attach_file" value="" style="display:none;">
+          </div>
+        </div>
+      </div>
+    </div>
     <sheltersection-stepbuttons></sheltersection-stepbuttons>
   </div>
 </template>
