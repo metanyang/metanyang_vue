@@ -2,6 +2,9 @@
 .point1{color: #fcac2c;}
 .point2{color:#626262;font-size: 20px;}
 
+.modal-container{position: relative;}
+.modal-mask .close{width: 20px;display: inline-block;float: right;position: absolute;font-size: 29px;top: 11px;right: 12px;}
+
 header{height: 88px;width: 100%;}
 header .headerWrap{width:1080px; margin:0px auto; padding-top:33px;}
 header .headerWrap .logoWrap{float:left;}
