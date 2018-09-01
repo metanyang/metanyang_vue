@@ -1,12 +1,12 @@
 <template>
   <div class="pageWrap">
-    <donatesection-stepcommon :props-step=3>
+    <donatesection-stepcommon>
       <slot>
         이제 마지막 단계입니다! <br/>
         작성하신 정보가 맞는지 확인해주세요.
       </slot>
     </donatesection-stepcommon>
-    <div class="boxWrap">
+    <div class="boxWrap" v-show="this.$store.getters.getDonateStep === 3">
       <div class="resultWrap">
         <div class="inner">
           <div class="detail">

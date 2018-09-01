@@ -1,11 +1,11 @@
 <template>
   <div class="pageWrap">
-    <donatesection-stepcommon :props-step=1>
+    <donatesection-stepcommon>
       <slot>
         후원을 결정해주셔서 감사합니다.<br>어떤 물품을 후원해주시겠어요?
       </slot>
     </donatesection-stepcommon>
-    <div class="boxWrap">
+    <div class="boxWrap" v-show="this.$store.getters.getDonateStep === 1">
       <div class="box">
         <div class="info"><img src="../../assets/img/1.jpg" alt="물품사진1"></div>
         <div class="position">담요 및 이불</div>

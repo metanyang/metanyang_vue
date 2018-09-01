@@ -1,12 +1,12 @@
 <template>
   <div class="pageWrap">
-    <donatesection-stepcommon :props-step=2>
+    <donatesection-stepcommon>
       <slot>
         물품 추적을 위해 개인정보를 작성해주세요. <br/>
         어떤 보호소에 물품을 보내시겠어요?
       </slot>
     </donatesection-stepcommon>
-    <div class="boxWrap">
+    <div class="boxWrap" v-show="this.$store.getters.getDonateStep === 2">
       <div class="inputWrap">
         <div class="inputSub">
           <p class="info">성함</p>
