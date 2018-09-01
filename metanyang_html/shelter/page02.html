@@ -11,6 +11,19 @@
 			function showList() {
 				alert('더보기');
 			}
+
+			function attach_file(){
+				$('#attach_file').click();
+			}
+			$(document).ready(function(){
+				$('#attach_file').change(function(){
+					var lastIndex = $(this).val().lastIndexOf('\\');
+					var fileNm = $(this).val().substring(lastIndex+1);
+					$('.attachFile .wrap .txt span').text('');
+					$('#file_name').css('display','inline-block');
+					$('#file_name').val(fileNm);
+				});
+			});
 		</script>
 	</head>
 	<body>
@@ -49,25 +62,30 @@
 					<div class="donatorInfo">
 					 	<span>이** 님</span> | 서울시 마포구 노고산동 | 담요 및 이불 3개, 7kg 이상
 					</div>
-					<div class="memoWrap">
-						<p>메모</p>
-						<textarea name="meno" rows="8" cols="80" placeholder="메모를 입력해주세요"></textarea>
+					<form name="frm" action="" method="post" enctype="multipart/form-data">
+						<div class="memoWrap">
+							<p>메모</p>
+							<textarea name="meno" rows="8" cols="80" placeholder="메모를 입력해주세요"></textarea>
 
-						<p>사진첨부</p>
-						<div class="attachFile">
-							<div class="wrap">
-								<div class="txt"><img src="../img/attach.png">파일을 드래그하거나 클릭하세요</div>
+							<p>사진첨부</p>
+							<div class="attachFile">
+								<div class="wrap">
+									<div class="txt" onclick="attach_file(); return false;">
+										<img src="../img/attach.png"><span>파일을 업로드 해주세요.</span>
+										<input type="text" id="file_name" value="" style="border:none;font-size:15px;display:none;"></div>
+									<input type="file" id="attach_file" name="attach_file" value="" style="display:none;">
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="btnWrap">
-						<div class="btn">
-							<a href="#" class="white">이전</a>
+						<div class="btnWrap">
+							<div class="btn">
+								<a href="#" class="white">이전</a>
+							</div>
+							<div class="btn">
+								<a href="#">전송</a>
+							</div>
 						</div>
-						<div class="btn">
-							<a href="#">전송</a>
-						</div>
-					</div>
+					</form>
 				</div>
 			</div>
 		</section>
