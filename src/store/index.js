@@ -16,7 +16,10 @@ import {
   GET_CENTER_SPONSERSHIPS_REQUEST,
   GET_CENTER_SPONSERSHIPS_FAILED,
   GET_CENTER_SPONSERSHIPS_SUCCESS,
-  SET_PARAM
+  SET_PARAM,
+  SHELTER_INIT_STEP,
+  SHELTER_NEXT_STEP,
+  SHELTER_PREV_STEP
 } from './actions'
 import { $http } from '@/utils/api'
 
@@ -61,6 +64,15 @@ const mutations = {
   [SET_PARAM]: (state, {key, data}) => {
     console.log(key, data)
     state.params[key] = data
+  },
+  [SHELTER_INIT_STEP]: state => {
+    state.shelterStep = 1
+  },
+  [SHELTER_NEXT_STEP]: state => {
+    state.shelterStep += 1
+  },
+  [SHELTER_PREV_STEP]: state => {
+    state.shelterStep -= 1
   },
   [DONATE_INIT_STEP]: state => {
     state.donateStep = 1
