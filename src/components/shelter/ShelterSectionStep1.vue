@@ -1,7 +1,7 @@
 <template>
   <div class="pageWrap">
     <sheltersection-stepcommon>
-      <slot><span class="point2">고양시 유기동물 보호소</span> 님, 안녕하세요.<br>새로 들어온 후원이 <span class="point1">{{this.$store.getters.getCenterSponserships.length}}</span>건 있습니다.</slot>
+      <slot><span class="point2">{{this.$store.getters.getParams.item.name}}</span> 님, 안녕하세요.<br>새로 들어온 후원이 <span class="point1">{{this.$store.getters.getCenterSponserships.length}}</span>건 있습니다.</slot>
     </sheltersection-stepcommon>
     <div v-show="this.$store.getters.getShelterStep === 1">
       <div class="shelterViewWrap">
