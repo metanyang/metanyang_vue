@@ -51,6 +51,7 @@ export default {
       this.$store.commit(SET_PARAM, {key: 'sWeight', data: item.s_weight})
       this.$store.commit(SET_PARAM, {key: 'goodName', data: item.good_name})
       this.$store.commit(SET_PARAM, {key: 'myAddress', data: item.address})
+      this.$store.commit(SET_PARAM, {key: 'sponsershipId', data: item.id})
       this.$store.commit(SHELTER_NEXT_STEP)
     }
   }

@@ -18,6 +18,9 @@ import {
   GET_CENTER_SPONSERSHIPS_REQUEST,
   GET_CENTER_SPONSERSHIPS_FAILED,
   GET_CENTER_SPONSERSHIPS_SUCCESS,
+  POST_SPONSERSHIPS_RESULTS_REQUEST,
+  POST_SPONSERSHIPS_RESULTS_FAILED,
+  POST_SPONSERSHIPS_RESULTS_SUCCESS,
   SET_PARAM,
   SHELTER_INIT_STEP,
   SHELTER_NEXT_STEP,
@@ -34,7 +37,8 @@ const state = {
     goods: '',
     centers: '',
     sponserships: '',
-    center_sponserships: ''
+    center_sponserships: '',
+    sponserships_results: ''
   },
   params: {
     goodId: '',
@@ -44,7 +48,8 @@ const state = {
     sCount: '',
     sWeight: '',
     userId: '',
-    goodName: ''
+    goodName: '',
+    sponsershipId: ''
   },
   data: {
     goods: [],
@@ -126,6 +131,16 @@ const mutations = {
   },
   [GET_CENTER_SPONSERSHIPS_FAILED]: state => {
     state.status.center_sponserships = 'error'
+  },
+  [POST_SPONSERSHIPS_RESULTS_REQUEST]: state => {
+    state.status.sponserships_results = 'loading'
+  },
+  [POST_SPONSERSHIPS_RESULTS_SUCCESS]: (state, res) => {
+    state.status.sponserships_results = 'success'
+    state.data.sponserships_results = res.data
+  },
+  [POST_SPONSERSHIPS_RESULTS_FAILED]: state => {
+    state.status.sponserships_results = 'error'
   }
 }
 
@@ -183,6 +198,20 @@ const actions = {
         })
         .catch(err => {
           commit(GET_CENTER_SPONSERSHIPS_FAILED)
+          reject(err)
+        })
+    })
+  },
+  [POST_SPONSERSHIPS_RESULTS_REQUEST]: ({commit, state, getters, rootGetters}, {sponsershipId, file, content}) => {
+    commit(POST_SPONSERSHIPS_RESULTS_REQUEST)
+    return new Promise((resolve, reject) => {
+      $http.post(`/sponserships/${sponsershipId}/results`)
+        .then(res => {
+          commit(POST_SPONSERSHIPS_RESULTS_SUCCESS, res)
+          resolve()
+        })
+        .catch(err => {
+          commit(POST_SPONSERSHIPS_RESULTS_FAILED)
           reject(err)
         })
     })
