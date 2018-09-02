@@ -27,8 +27,8 @@
           </div>
           <div class="detail">
             <p class="subject">보내실 보호소</p>
-            <p class="info"> {{ this.$store.getters.getCenters[this.$store.getters.getParams.centerId-1].name }}</p>
-            <p class="info small"> {{ this.$store.getters.getCenters[this.$store.getters.getParams.centerId-1].address }} | 보호동물 {{ this.$store.getters.getCenters[this.$store.getters.getParams.centerId-1].num_cats }} 마리</p>
+            <p class="info"> {{ this.$store.getters.getParams.item.name }}</p>
+            <p class="info small"> {{ this.$store.getters.getParams.item.address }} | 보호동물 {{ this.$store.getters.getParams.item.num_cats }} 마리</p>
           </div>
         </div>
       </div>

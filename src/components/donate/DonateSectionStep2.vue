@@ -38,7 +38,7 @@
           <div class="list">
             <ul>
               <li v-for="(item, index) in this.$store.getters.getCenters" :key="index" v-if="search === '' || item.name.indexOf(search) > -1 ">
-                <a @click="viewDetail(index)">
+                <a @click="viewDetail(item)">
                   <div class="shelterName active">{{ item.name }}</div>
                   <div class="shelterState">{{ splitSigungu(item.address) }} | 고양이 {{ item.num_cats }}마리가 기다립니다.</div>
                 </a>
@@ -85,7 +85,8 @@ export default {
         email: '',
         sCount: '',
         sWeight: '',
-        myAddress: ''
+        myAddress: '',
+        item: {}
       },
       showModal: false,
       selectedItem: {}
@@ -97,10 +98,11 @@ export default {
     'donatesection-stepbuttons': DonateSectionStepButtons
   },
   methods: {
-    viewDetail (selectedCentersIndex) {
+    viewDetail (item) {
       this.showModal = !this.showModal
-      this.selectedItem = this.$store.getters.getCenters[selectedCentersIndex]
-      this.$store.commit(SET_PARAM, {key: 'centerId', data: this.selectedItem.id})
+      this.selectedItem = item
+      this.$store.commit(SET_PARAM, {key: 'centerId', data: item.id})
+      this.$store.commit(SET_PARAM, {key: 'item', data: item})
     },
     sendSponserships () {
       this.$store.commit(SET_PARAM, {key: 'name', data: this.params.name})
