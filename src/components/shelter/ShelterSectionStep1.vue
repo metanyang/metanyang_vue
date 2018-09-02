@@ -37,7 +37,7 @@ export default {
     'sheltersection-stepcommon': ShelterSectionStepCommon
   },
   created () {
-    this.$store.dispatch(GET_CENTER_SPONSERSHIPS_REQUEST, {centerId: 60})
+    this.$store.dispatch(GET_CENTER_SPONSERSHIPS_REQUEST, {centerId: 25})
       .then(() => {
         console.log('success')
       })
