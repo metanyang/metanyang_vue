@@ -117,7 +117,7 @@ export default {
         good_id: this.$store.getters.getParams.goodId,
         center_id: this.$store.getters.getParams.centerId,
         s_count: this.$store.getters.getParams.sCount,
-        s_width: this.$store.getters.getParams.sWeight
+        s_weight: this.$store.getters.getParams.sWeight
       }
       this.$store.dispatch(POST_SPONSERSHIPS_REQUEST, {params: params})
         .then(() => {
