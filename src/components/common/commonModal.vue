@@ -8,7 +8,7 @@
               default header
             </slot>
           </div>
-          <div class="close" @click="$emit('close')">
+          <div class="close" @click="$emit('close')" style="cursor:pointer;">
             x
           </div>
           <div class="modal-body">

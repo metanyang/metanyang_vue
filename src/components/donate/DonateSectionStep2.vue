@@ -31,13 +31,13 @@
       <div class="shelterWrap">
         <p class="info">보호소 리스트</p>
         <div class="searchWrap">
-          <input type="text" v-model="search" name="searchKeyword" value="">
+          <input type="text" v-model="search" name="searchKeyword">
           <a class="search"><img src="../../assets/img/search.png"></a>
         </div>
         <div class="listWrap">
           <div class="list">
             <ul>
-              <li v-for="(item, index) in this.$store.getters.getCenters" :key="index">
+              <li v-for="(item, index) in this.$store.getters.getCenters" :key="index" v-if="search === '' || item.name.indexOf(search) > -1 ">
                 <a @click="viewDetail(index)">
                   <div class="shelterName active">{{ item.name }}</div>
                   <div class="shelterState">{{ splitSigungu(item.address) }} | 고양이 {{ item.num_cats }}마리가 기다립니다.</div>
@@ -62,7 +62,7 @@
       <div slot="footer">
         <div class="btnWrap">
           <div class="btn">
-            <a href="#" @click="sendSponserships">후원하기</a>
+            <a style="cursor:pointer;" @click="sendSponserships">후원하기</a>
           </div>
         </div>
       </div>
@@ -79,6 +79,7 @@ import { POST_SPONSERSHIPS_REQUEST, SET_PARAM, DONATE_NEXT_STEP, DONATE_PREV_STE
 export default {
   data () {
     return {
+      search: '',
       params: {
         name: '',
         email: '',

@@ -25,12 +25,16 @@ export default {
     return {
       menus: [
         {
-          name: 'NEWS',
+          name: 'ABOUT',
           link: 'news'
         },
         {
           name: 'STORY',
           link: 'story'
+        },
+        {
+          name: 'CONTACT',
+          link: 'contact'
         },
         {
           name: 'DONATE',
@@ -39,10 +43,6 @@ export default {
         {
           name: 'SHELTER',
           link: 'shelter'
-        },
-        {
-          name: 'CONTACT',
-          link: 'contact'
         }
       ]
     }
