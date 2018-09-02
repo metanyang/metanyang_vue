@@ -16,8 +16,8 @@
           <div class="wrap">
             <div class="txt" @click="trigger">
               <img src="../../assets/img/attach.png"><span>파일을 업로드 해주세요.</span>
-              <input type="text" id="file_name" value="" style="border:none;font-size:15px;display:none;" @change="setFile($event)"></div>
-            <input type="file" id="attach_file" name="attach_file" ref="attach_file" value="" style="display:none;">
+              <input type="text" id="file_name" value="" style="border:none;font-size:15px;display:none;"></div>
+            <input type="file" id="attach_file" name="image" ref="attach_file" value="" style="display:none;" @change="setFile($event)">
           </div>
         </div>
       </div>
@@ -48,10 +48,15 @@ export default {
       this.$refs.attach_file.click()
     },
     setFile (event) {
+      console.log(event.target.files)
       this.data = event.target.files[0]
     },
     nextStep () {
-      this.$store.dispatch(POST_SPONSERSHIPS_RESULTS_REQUEST, {sponsershipId: this.$store.getters.getParams.sponsershipId, file: this.data, content: this.$data.content})
+      this.$store.dispatch(POST_SPONSERSHIPS_RESULTS_REQUEST, {sponsershipId: this.$store.getters.getParams.sponsershipId, image: this.data, content: this.$data.content}, {
+        headers: {
+          'Content-Type': `multipart/form-data`
+        }
+      })
         .then(() => {
           console.log('success')
           this.$store.commit(SHELTER_NEXT_STEP)

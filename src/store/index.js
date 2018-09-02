@@ -202,10 +202,14 @@ const actions = {
         })
     })
   },
-  [POST_SPONSERSHIPS_RESULTS_REQUEST]: ({commit, state, getters, rootGetters}, {sponsershipId, file, content}) => {
+  [POST_SPONSERSHIPS_RESULTS_REQUEST]: ({commit, state, getters, rootGetters}, {sponsershipId, image, content}) => {
     commit(POST_SPONSERSHIPS_RESULTS_REQUEST)
     return new Promise((resolve, reject) => {
-      $http.post(`/sponserships/${sponsershipId}/results`)
+      const formData = new FormData()
+      formData.append('content', content)
+      formData.append('image', image, image.name)
+
+      $http.post(`/sponserships/${sponsershipId}/results`, formData)
         .then(res => {
           commit(POST_SPONSERSHIPS_RESULTS_SUCCESS, res)
           resolve()
