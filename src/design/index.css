@@ -1,4 +1,4 @@
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css); 
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 .bold{font-weight: bold;}
 .point1{color: #fcac2c;}
@@ -70,10 +70,10 @@ section .mainWrap .pageWrap .container .progressbar li.active:before {border-col
 section .mainWrap .pageWrap .container .progressbar li.active:after {background-color: #fcac2c;background-color: #fcac2c;}
 
 section .mainWrap .pageWrap .boxWrap{padding-top:50px;}
-section .mainWrap .pageWrap .boxWrap .box{display:inline-block; width:32%;}
+section .mainWrap .pageWrap .boxWrap .box{display:inline-block; width:33.3333%;}
 section .mainWrap .pageWrap .boxWrap .box .info{font-size: 22px;text-align: center;background-color: #fff;max-height:350px;}
 section .mainWrap .pageWrap .boxWrap .box .info img{width:70%;}
-section .mainWrap .pageWrap .boxWrap .box .position{    width: 23%;text-align: center;border-bottom: 2px solid #c3c3c3;padding: 16px 0px 10px;margin: 0 auto; }
+section .mainWrap .pageWrap .boxWrap .box .position{    width: 40%;text-align: center;border-bottom: 2px solid #c3c3c3;padding: 16px 0px 10px;margin: 0 auto; }
 section .mainWrap .pageWrap .btnWrap{width:100%;margin:0 auto;text-align:center;padding-top:20px;}
 
 section .mainWrap .pageWrap .btnWrap .btn{display: inline-block;padding-bottom: 50px;}
