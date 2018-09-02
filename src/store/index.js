@@ -43,7 +43,8 @@ const state = {
     centerId: '',
     sCount: '',
     sWeight: '',
-    userId: ''
+    userId: '',
+    goodName: ''
   },
   data: {
     goods: [],

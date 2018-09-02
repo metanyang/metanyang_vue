@@ -108,7 +108,7 @@ section .mainWrap .pageWrap .boxWrap .resultWrap .inner .detail .info{color:#626
 section .mainWrap .pageWrap .boxWrap .resultWrap .inner .detail .small{font-size: 13px;padding-top:5px;}
 
 /*shelter*/
-section .mainWrap .pageWrap .shelterViewWrap{margin-top:20px;border-radius: 10px;border: solid 1px #b8b8b8;}
+section .mainWrap .pageWrap .shelterViewWrap{margin-top:20px;border-radius: 10px;border: solid 1px #b8b8b8;margin-bottom: 126px;}
 section .mainWrap .pageWrap .shelterViewWrap ul li{padding: 11px 0px;border-bottom: solid 1px #b8b8b8;}
 section .mainWrap .pageWrap .shelterViewWrap ul li:last-child{border-bottom: 0px;padding:0px;background-color: #e6e6e6;border-radius: 0px 0px 10px 10px;}
 section .mainWrap .pageWrap .shelterViewWrap ul li .donateName{width:20%;display: inline-block;padding-left:20px;}

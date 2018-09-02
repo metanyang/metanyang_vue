@@ -5,7 +5,7 @@
     </sheltersection-stepcommon>
     <div v-show="this.$store.getters.getShelterStep === 2">
       <div class="donatorInfo">
-        <span>이** 님</span> | 서울시 마포구 노고산동 | 담요 및 이불 3개, 7kg 이상
+        <span>{{this.$store.getters.getParams.name}} 님</span> | {{this.$store.getters.getParams.myAddress}} | {{this.$store.getters.getParams.goodName}} {{this.$store.getters.getParams.sCount}}개, {{this.$store.getters.getParams.sWeight}}kg 이상
       </div>
       <div class="memoWrap">
         <p>메모</p>
